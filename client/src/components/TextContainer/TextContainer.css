@@ -1,8 +1,8 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  color: #fff;
-  background: #0772ac;
+  color: #592941;
+  background: #9EA3F5;
   border-right: 2px solid #000;
   font-family: "Poppins", sans-serif;
   height: 100vh;

@@ -5,7 +5,7 @@
   padding: 0;
 }
 body {
-  background-color: #015a8b;
+  background-color: #BBBEFE;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -26,7 +26,7 @@ button {
     border-radius: 5px;
   }
   ::-webkit-scrollbar-track {
-    background: linear-gradient(0deg, #f7a51c 0%, #f7a51c 100%);
+    background: linear-gradient(0deg, #592941 0%, #592941 100%);
   }
 
 /* Navbar brand & buttons */
@@ -39,7 +39,7 @@ nav {
   align-items: center;
 }
 .brand {
-  color: #ef7b2b;
+  color: #592941;
   font-size: 1.77rem;
   display: flex;
   align-items: flex-start;
@@ -55,7 +55,7 @@ nav > div > svg {
 /* Navbar links { */
 nav > div > a {
   color: #eee;
-  background: #ef7b2b;
+  background: #592941;
   border: 1px solid #002a41;
   border-radius: 25px;
   font-size: 1.177rem;
@@ -69,7 +69,7 @@ nav > div > a:hover {
 }
 nav > div > a:nth-child(2) {
   margin-right: 0;
-  background: #f7a51c;
+  background: #592941;
 }
 
 /* Flex box container */
@@ -91,16 +91,16 @@ nav > div > a:nth-child(2) {
 /* Flex section 1 */
 
 .biggest-heading {
-  color: #fff;
+  color: #808080;
   font-size: 4rem;
   line-height: 70px;
   text-shadow: 3px 10px 10px rgba(0, 0, 0, 0.27);
 }
 .biggest-heading-orange {
-  color: #ef7b2b;
+  color: #592941;
 }
 .second-heading {
-  color: #fff;
+  color: #808080;
   font-weight: 600;
   font-size: 1.2rem;
   margin: 1.77rem 0 0.77rem 0;
@@ -111,8 +111,8 @@ nav > div > a:nth-child(2) {
 
 .form-group {
   width: 29.77rem;
-  background: #fff;
-  color: #015a8b;
+  background: #FFCDD4;
+  color: #592941;
   margin-top: 1.25rem;
   border: 0.3rem solid #fff;
   border-radius: 30rem;
@@ -127,11 +127,11 @@ nav > div > a:nth-child(2) {
 }
 
 .form-input {
-  background: #f7a51c;
-  color: #fff;
+  background: #FFCDA2;
+  color: #000;
   width: 17.77rem;
   height: 3.277rem;
-  border: 0.3rem solid #015a8b;
+  border: 0.3rem solid #592941;
   border-bottom-right-radius: 30rem;
   border-top-right-radius: 30rem;
   float: right;
@@ -151,8 +151,8 @@ nav > div > a:nth-child(2) {
 }
 
 .submit-btn {
-  color: #f7a51c;
-  background: #fff;
+  color: #592941;
+  background: #FFCDD4;
   border: 0.3rem solid #fff;
   border-radius: 30rem;
   font-weight: bold;
@@ -168,7 +168,7 @@ nav > div > a:nth-child(2) {
 }
 
 .triangle {
-  color: #f7a51c;
+  color: #592941;
   display: inline;
   font-size: 1rem;
 }

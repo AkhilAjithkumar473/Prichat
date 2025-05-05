@@ -4,7 +4,7 @@
     justify-content: space-between;
     font-family: "Poppins", sans-serif;
     text-shadow: 3px 7px 7px rgba(0, 0, 0, 0.27);
-    background: #0772ac;
+    background: #9EA3F5;
     height: 60px;
     width: 100%;
   }
@@ -14,7 +14,7 @@
     flex: 0.5;
     align-items: center;
     margin-left: 5%;
-    color: #eee;
+    color: #592941;
     text-transform: capitalize;
   }
   

@@ -14,7 +14,7 @@ const LandingPage = () => {
       <nav>
         <div className="brand">
           <FaPhoenixSquadron />
-          Prifacy
+          Prichat
         </div>
         <div>
           <a href="/">
@@ -34,7 +34,7 @@ const LandingPage = () => {
             <span className="biggest-heading-orange">more privacy?</span>
           </p>
           <p className="second-heading">
-            Have real time conversations with friends & family on Prifacy!
+            Have real time conversations with friends & family on Prichat!
           </p>
             <div className="form-group">
               <span className="form-label">
@@ -65,14 +65,16 @@ const LandingPage = () => {
               />
             </div>
             <Link
-              onClick={(e) => (!name || !room ? e.preventDefault : null)}
+              onClick={(e) => {
+                if (!name || !room) e.preventDefault();
+              }}
               to={`/chat?name=${name}&room=${room}`}
             >
               <button className="submit-btn" type="submit">
                 <div className="triangle">
                   <FaPlay />
                 </div>{" "}
-                Sign In
+                Join
               </button>
             </Link>
         </section>

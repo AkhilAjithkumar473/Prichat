@@ -12,7 +12,7 @@ const Input = ({ message, setMessage, sendMessage }) => {
             className="input"
             placeholder="Type a message" 
             onChange={e => setMessage(e.target.value)}
-            onKeyPress={e => e.key === "Enter" ? sendMessage(e) : null} 
+            onKeyDown={e => e.key === "Enter" ? sendMessage(e) : null} 
             />
             <button className="sendButton" onClick={e => sendMessage(e)}><img src={sendIcon} className="img-send-button" alt="send icon" /></button>        
         </form>
