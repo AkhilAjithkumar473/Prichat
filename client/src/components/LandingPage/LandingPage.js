@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaComments, FaUsers, FaPhoenixSquadron, FaPlay } from "react-icons/fa";
+import { FaComments, FaUsers, FaPlay } from "react-icons/fa";
 
-import foxImage from "../../images/july-banner.svg";
+import logo from '../../icons/prichat_logo.png'
+import frontImg from '../../icons/frontImg.png'
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -13,7 +14,7 @@ const LandingPage = () => {
     <>
       <nav>
         <div className="brand">
-          <FaPhoenixSquadron />
+          <img src={logo} className="logo" alt="logo" />
           Prichat
         </div>
         <div>
@@ -79,7 +80,7 @@ const LandingPage = () => {
             </Link>
         </section>
         <section className="flex-container">
-          <img src={foxImage} alt="fox background" />
+          <img src={frontImg} alt="front" />
         </section>
       </main>
     </>
