@@ -11,8 +11,12 @@
   "author": "You know who",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.3",
     "nodemon": "^2.0.7",
     "socket.io": "^4.0.0"
   }
