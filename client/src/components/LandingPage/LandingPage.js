@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaComments, FaUsers, FaPlay } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaPlay } from "react-icons/fa";
 
 import logo from '../../icons/prichat_logo.png'
 import frontImg from '../../icons/frontImg.png'
@@ -9,6 +9,15 @@ import "./LandingPage.css";
 const LandingPage = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const navigate = useNavigate();
+  const nameFromStorage = localStorage.getItem('name');
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    navigate('/');
+  };
 
   return (
     <>
@@ -18,12 +27,17 @@ const LandingPage = () => {
           Prichat
         </div>
         <div>
-          <a href="/">
-            <FaUsers /> Register
-          </a>
-          <a href="/">
-            <FaComments /> Get Support
-          </a>
+          {!nameFromStorage ? (
+            <>
+              <Link to="/register">Register</Link>
+              <Link to="/login">Login</Link>
+            </>
+          ) : (
+            <>
+              <span>Welcome {nameFromStorage}!</span>
+              <button className="logout-btn" onClick={handleLogout} style={{ marginLeft: 10 }}>Logout</button>
+            </>
+          )}
         </div>
       </nav>
 

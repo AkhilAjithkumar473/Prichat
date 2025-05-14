@@ -1,14 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Chat from "./components/Chat/Chat";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
+const isAuthenticated = () => !!localStorage.getItem('token');
+
+// Protected route wrapper for v6+
+const PrivateRoute = ({ children }) => {
+  return isAuthenticated() ? children : <Navigate to="/login" />;
+};
 
 const App = () => (
-    <Router>
-        <Route path="/" component={LandingPage} exact />
-        <Route path="/chat" component={Chat} />
-    </Router>
+  <Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route
+        path="/chat"
+        element={
+          <PrivateRoute>
+            <Chat />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+  </Router>
 );
 
 export default App;
